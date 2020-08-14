@@ -1,17 +1,41 @@
-#python 脚本编写实战（二）- 作业帖
+# python 脚本编写实战（二）- 作业帖
 
-##所有代码都要加注释，作业贴一个github链接
+## 所有代码都要加注释，作业贴一个github链接
 
-###作业1
-用类和面向对象的思想，“描述”生活中任意接触到的东西（比如动物、小说里面的人物，不做限制，随意发挥），数量为5个。
+### 作业1
+workOne/class_demo.py 定义一个car类
+  - openDoor  开车门
+  - closeDoor 关车门
+  - driverBackward 倒车
+  - driverForward 向前行驶
+  - showCarInfo 展示车辆信息
+  - stalls  熄火
+  - startUp 启动
+  
+### 作业2
+<p>workTwo/person.py 定义一个Person类,定义基础人物属性方法模板
+ <ul>def put_ability 定义施展技能</ul>
+ <ul>def basicAttack 定义基础攻击技能</ul>
+ <ul>def showPersonInfo 定义展示人物基本信息</ul>
+ <ul>def initInfo 定义基础初始化</ul>
+ <ul>def takeHurts 定义受到伤害</ul>
+ <ul>def see_people 定义战斗前对话</ul>
 
-###作业2
-- 定义一个天山童姥类 ，类名为TongLao，属性有血量，武力值（通过传入的参数得到）。TongLao类里面有2个方法，
-see_people方法，需要传入一个name参数，如果传入”WYZ”（无崖子），则打印，“师弟！！！！”，如果传入“李秋水”，打印“呸，贱人”，如果传入“丁春秋”，打印“叛徒！我杀了你”
+<p>workTwo/tonglao.py 定义一个TongLao类，继承Persion类，定义童姥类人物属性方法模板
+ <ul>def personTemplate 定义童姥类基础模板</ul>
+ <ul>def fight_zms 定义天山折梅手技能</ul>
+ <ul>def showPersonInfo 定义展示人物基本信息</ul>
 
-- fight_zms方法（天山折梅手），调用天山折梅手方法会将自己的武力值提升10倍，血量缩减2倍。需要传入敌人的hp，power，进行一回合制对打，打完之后，比较双方血量。血多的一方获胜。
+<p>workTwo/xuzhu.py 定义一个XuZhu类，继承TongLao类，定义虚竹类人物属性方法模板
+ <ul>def personTemplate 定义虚竹类基础模板</ul>
+ <ul>def read 定义念经技能</ul>
+ <ul>def showPersonInfo 定义展示人物基本信息</ul>
 
-- 定义一个XuZhu类，继承于童姥。虚竹宅心仁厚不想打架。所以虚竹只有一个read（念经）的方法。每次调用都会打印“罪过罪过”
-加入模块化改造
+<p>workTwo/GameMain.py 定义一个Game类，当以游戏回合规则
+ <ul>def GameFightMain 定义战斗回合主函数</ul>
+ <ul>def getAttacked 定义获取当前要攻击人物</ul>
+ <ul>def showPartakePerson 定义展示参战人物名称</ul>
+ <ul>def attackBehaviour 定义进攻方对防守方的攻击行为</ul>
 
-<br>希望各位同学在此基础上可以添加自己的“freestyle”哦</br>
+
+

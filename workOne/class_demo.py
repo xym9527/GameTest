@@ -22,6 +22,10 @@ class Car:
         self.runStatus = False
 
     def openDoor(self):
+        """
+        开车门
+        :return:
+        """
         if self.doorStatus:
             print("门是开着的")
         else:
@@ -29,6 +33,10 @@ class Car:
             print("门打开了")
 
     def closeDoor(self):
+        """
+        关车门
+        :return:
+        """
         if not self.doorStatus:
             print("门是关着的")
         else:
@@ -36,18 +44,30 @@ class Car:
             print("门已经关好了")
 
     def driverForward(self):
+        """
+        车向前行驶
+        :return:
+        """
         if self.runStatus:
             print("车正在前进中")
         else:
             print("请先启动车")
 
     def driverBackward(self):
+        """
+        倒车
+        :return:
+        """
         if self.runStatus:
             print("请注意,正在倒车")
         else:
             print("请先启动车")
 
     def startUp(self):
+        """
+        启动车辆
+        :return:
+        """
         if self.doorStatus:
             print("门是开着的,请关闭车门后再启动")
         elif self.runStatus:
@@ -57,6 +77,10 @@ class Car:
             print("车启动成功")
 
     def stalls(self):
+        """
+        车熄火
+        :return:
+        """
         if not self.runStatus:
             print("车没有启动")
         else:
@@ -64,15 +88,21 @@ class Car:
             print("车熄火成功")
 
     def showCarInfo(self):
+        """
+        展示车辆基础信息
+        :return:
+        """
         print(f"这辆车型是{self.carModel},品牌是{self.carBrand},颜色是{self.carColor}")
+
 
 
 if __name__ == '__main__':
     baoma = Car('Suv', '宝马', '白色')
-    baoma.showCarInfo()
-    baoma.closeDoor()
-    baoma.openDoor()
-    baoma.closeDoor()
-    baoma.startUp()
-    baoma.stalls()
-    baoma.driverBackward()
+    # baoma.showCarInfo()
+    # baoma.closeDoor()
+    # baoma.openDoor()
+    # baoma.closeDoor()
+    # baoma.startUp()
+    # baoma.stalls()
+    # baoma.driverBackward()
+    print(dir(Car))
