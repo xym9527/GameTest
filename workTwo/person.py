@@ -41,11 +41,11 @@ class Person:
         技能：基础攻击
         :return:
         """
-        fightScope = 0
+        fightScope = 0  # 代表攻击范围
         tmpHurt = self.tmpCE
         print(f"{self.name} 施展了普通技能:基础攻击,", end=' ')
 
-        # 返回0代表单体攻击，tmpCE代表该技能的伤害值
+        # 返回0代表单体攻击，tmpHurt代表该技能的伤害值
         return fightScope, tmpHurt
 
     def showPersonInfo(self):

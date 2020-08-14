@@ -41,19 +41,19 @@ class TongLao(Person):
         技能：天山折梅手，群体技能
         :return:
         """
-        # 魔力值不足则施展普通攻击，否则施展天山折梅手
-        fightScope = 1
+        fightScope = 1  # 代表攻击范围
 
+        # 魔力值不足则施展普通攻击，否则施展天山折梅手
         if self.tmpMP - 400 < 0:
             print("不好,魔力值不足,", end=" ")
             fightScope, tmpHurt = self.basicAttack()
         else:
             self.tmpMP -= 400  # 该技能的消耗魔力值
-            tmpHurt = self.CE * random.uniform(2, 3)  # 该技能的伤害值：基础战斗力的2倍
+            tmpHurt = self.CE * random.uniform(2, 3)  # 该技能的伤害值：基础战斗力的2到3倍
 
             print(f"{self.name} 施展了群攻门派技能:天山折梅手,", end=' ')
 
-        # 返回1代表群攻，同时该技能的伤害值
+        # 返回1代表群攻，同时返回技能的伤害值
         return fightScope, tmpHurt
 
     def fight_ssf(self):
@@ -62,14 +62,14 @@ class TongLao(Person):
         :return:
         """
         # 魔力值不足则施展普通攻击，否则施展生死符
-        fightScope = 0
+        fightScope = 0  #代表攻击范围
 
         if self.tmpMP - 200 < 0:
             print("魔力值不足,", end=" ")
             fightScope, tmpHurt = self.basicAttack()
         else:
             self.tmpMP -= 200  # 该技能的消耗魔力值
-            tmpHurt = self.CE * random.uniform(2, 4)  # 该技能的伤害值：基础战斗力的3倍
+            tmpHurt = self.CE * random.uniform(2, 4)  # 该技能的伤害值：基础战斗力的2到4倍
 
             print(f"{self.name} 施展了单体门派技能:生死符,", end=' ')
 
